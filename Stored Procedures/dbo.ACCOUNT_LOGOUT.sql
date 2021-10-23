@@ -1,0 +1,16 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [dbo].[ACCOUNT_LOGOUT]
+	@AccountID	varchar(21),
+	@id			int,
+	@nRet smallint	OUTPUT,
+	@a	  smallint	OUTPUT
+AS
+BEGIN TRAN
+	DELETE FROM CURRENTUSER WHERE strAccountID = @AccountID
+COMMIT TRAN
+SET @nRet = 1
+SET @a = 1
+GO

@@ -1,0 +1,30 @@
+CREATE TABLE [dbo].[BASE_ITEM]
+(
+[Num] [text] COLLATE Latin1_General_CI_AI NULL,
+[strcode] [text] COLLATE Latin1_General_CI_AI NULL,
+[strname] [text] COLLATE Latin1_General_CI_AI NULL,
+[Group] [text] COLLATE Latin1_General_CI_AI NULL,
+[Type] [text] COLLATE Latin1_General_CI_AI NULL,
+[Gen] [text] COLLATE Latin1_General_CI_AI NULL,
+[Class] [text] COLLATE Latin1_General_CI_AI NULL,
+[ItemPos] [text] COLLATE Latin1_General_CI_AI NULL,
+[Price] [text] COLLATE Latin1_General_CI_AI NULL,
+[PotType] [text] COLLATE Latin1_General_CI_AI NULL,
+[Pot] [text] COLLATE Latin1_General_CI_AI NULL,
+[AatMin] [text] COLLATE Latin1_General_CI_AI NULL,
+[AatMax] [text] COLLATE Latin1_General_CI_AI NULL,
+[DatMin] [text] COLLATE Latin1_General_CI_AI NULL,
+[DatMax] [text] COLLATE Latin1_General_CI_AI NULL,
+[Dis] [text] COLLATE Latin1_General_CI_AI NULL,
+[AMat] [text] COLLATE Latin1_General_CI_AI NULL,
+[DMat] [text] COLLATE Latin1_General_CI_AI NULL,
+[AC] [text] COLLATE Latin1_General_CI_AI NULL,
+[Dmr] [text] COLLATE Latin1_General_CI_AI NULL,
+[Hr] [text] COLLATE Latin1_General_CI_AI NULL,
+[Avo] [text] COLLATE Latin1_General_CI_AI NULL,
+[SpecialMac] [text] COLLATE Latin1_General_CI_AI NULL,
+[Contime] [text] COLLATE Latin1_General_CI_AI NULL,
+[Mac] [text] COLLATE Latin1_General_CI_AI NULL,
+[Wgt] [text] COLLATE Latin1_General_CI_AI NULL
+) ON [PRIMARY]
+GO

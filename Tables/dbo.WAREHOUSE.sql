@@ -1,0 +1,12 @@
+CREATE TABLE [dbo].[WAREHOUSE]
+(
+[strAccountID] [char] (21) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[strWarehousePw] [varchar] (17) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[nMoney] [int] NOT NULL CONSTRAINT [DF_WAREHOUSE_nMoney] DEFAULT ((0)),
+[dwTime] [int] NOT NULL CONSTRAINT [DF_WAREHOUSE_dwTime] DEFAULT ((0)),
+[WarehouseData] [varchar] (1600) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[strSerial] [varchar] (1600) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[WAREHOUSE] ADD CONSTRAINT [PK_WAREHOUSE] PRIMARY KEY CLUSTERED  ([strAccountID]) WITH (FILLFACTOR=90) ON [PRIMARY]
+GO

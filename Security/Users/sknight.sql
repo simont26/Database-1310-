@@ -1,0 +1,2 @@
+CREATE USER [sknight] WITHOUT LOGIN
+GO

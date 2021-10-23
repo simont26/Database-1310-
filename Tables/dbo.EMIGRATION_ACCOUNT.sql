@@ -1,0 +1,5 @@
+CREATE TABLE [dbo].[EMIGRATION_ACCOUNT]
+(
+[strAccountID] [char] (21) COLLATE Korean_Wansung_CI_AS NULL
+) ON [PRIMARY]
+GO

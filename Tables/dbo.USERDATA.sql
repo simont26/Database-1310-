@@ -1,0 +1,49 @@
+CREATE TABLE [dbo].[USERDATA]
+(
+[strUserId] [char] (21) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[Nation] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Nation] DEFAULT ((0)),
+[Race] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Race] DEFAULT ((1)),
+[Class] [smallint] NOT NULL CONSTRAINT [DF_USERDATA_Class] DEFAULT ((0)),
+[HairColor] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Gender] DEFAULT ((0)),
+[Rank] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Rank] DEFAULT ((0)),
+[Title] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Title] DEFAULT ((0)),
+[Level] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Level] DEFAULT ((1)),
+[Exp] [int] NOT NULL CONSTRAINT [DF_USERDATA_Exp] DEFAULT ((0)),
+[Loyalty] [int] NOT NULL CONSTRAINT [DF_USERDATA_Loyalty] DEFAULT ((100)),
+[Face] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Religion] DEFAULT ((0)),
+[City] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_City] DEFAULT ((0)),
+[Knights] [smallint] NOT NULL CONSTRAINT [DF_USERDATA_Knights] DEFAULT ((0)),
+[Fame] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Fame] DEFAULT ((0)),
+[Hp] [smallint] NOT NULL CONSTRAINT [DF_USERDATA_Hp] DEFAULT ((100)),
+[Mp] [smallint] NOT NULL CONSTRAINT [DF_USERDATA_Mp] DEFAULT ((100)),
+[Sp] [smallint] NOT NULL CONSTRAINT [DF_USERDATA_Sp] DEFAULT ((100)),
+[Strong] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Str] DEFAULT ((0)),
+[Sta] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Sta] DEFAULT ((0)),
+[Dex] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Dex] DEFAULT ((0)),
+[Intel] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Intel] DEFAULT ((0)),
+[Cha] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Cha] DEFAULT ((0)),
+[Authority] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Authority] DEFAULT ((1)),
+[Points] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Points] DEFAULT ((0)),
+[Zone] [tinyint] NOT NULL CONSTRAINT [DF_USERDATA_Zone] DEFAULT ((1)),
+[Bind] [smallint] NULL,
+[PX] [int] NOT NULL CONSTRAINT [DF_USERDATA_PX] DEFAULT ((268100)),
+[PZ] [int] NOT NULL CONSTRAINT [DF_USERDATA_PZ] DEFAULT ((131000)),
+[PY] [int] NOT NULL CONSTRAINT [DF_USERDATA_PY] DEFAULT ((0)),
+[dwTime] [int] NOT NULL CONSTRAINT [DF_USERDATA_dwTime] DEFAULT ((0)),
+[strSkill] [varchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL CONSTRAINT [DF_USERDATA_strSkill] DEFAULT (0x00),
+[strItem] [varchar] (400) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[strSerial] [varchar] (400) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[sQuestCount] [smallint] NOT NULL CONSTRAINT [DF_USERDATA_sQuestCount_1] DEFAULT ((0)),
+[strQuest] [varchar] (400) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[MannerPoint] [int] NOT NULL CONSTRAINT [DF_USERDATA_MannerPoint] DEFAULT ((0)),
+[LoyaltyMonthly] [int] NOT NULL CONSTRAINT [DF_USERDATA_LoyaltyMonthly] DEFAULT ((0)),
+[CreateTime] [smalldatetime] NOT NULL CONSTRAINT [DF_USERDATA_CreateTime_1] DEFAULT (getdate()),
+[UpdateTime] [smalldatetime] NULL,
+[Notes] [varchar] (max) COLLATE Latin1_General_CI_AS NULL,
+[Gold] [int] NOT NULL CONSTRAINT [DF_USERDATA_Gold] DEFAULT ((0))
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[USERDATA] ADD CONSTRAINT [PK_USERDATA] PRIMARY KEY CLUSTERED  ([strUserId]) WITH (FILLFACTOR=90) ON [PRIMARY]
+GO
+CREATE NONCLUSTERED INDEX [PK_Knights] ON [dbo].[USERDATA] ([Knights]) WITH (FILLFACTOR=90) ON [PRIMARY]
+GO
